@@ -1,19 +1,19 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>This is component1!!!!!!!!</h1>
     <h1>{{ computedMessage }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <button v-on:click="$emit('change-component', 'component1')">Go to component1</button>
+    <button v-on:click="$emit('change-component', 'HelloWorld')">Go Back to HelloWorld component</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'c1',
   props: {
     msg: String
   },

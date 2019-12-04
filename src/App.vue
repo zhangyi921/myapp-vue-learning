@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <component v-bind:is="componentToShow" v-on:change-component="componentToShow = $event"></component>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import component1 from './components/component1'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,component1
+  },
+  data: function(){
+    return {
+      componentToShow: "HelloWorld",
+    }
   }
 }
 </script>
